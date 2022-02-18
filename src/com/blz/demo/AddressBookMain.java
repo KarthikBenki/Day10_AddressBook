@@ -86,6 +86,7 @@ public class AddressBookMain {
 
     }
 
+	// deleting contact details using person name
     public void deletePerson() {
 	System.out.println("Enter the name to search and delete");
 	String s = scanner.next();
