@@ -86,7 +86,7 @@ public class AddressBookMain {
 
     }
 
-	// deleting contact details using person name
+    // deleting contact details using person name
     public void deletePerson() {
 	System.out.println("Enter the name to search and delete");
 	String s = scanner.next();
@@ -104,13 +104,27 @@ public class AddressBookMain {
 	}
     }
 
+    public void addMultiplePerson() {
+	while (true) {
+	    System.out.println(
+		    "Enter the option \n1)To Add Contect\n2)To Edit Contact" + "\n3)To Delete Contact\n4)exit");
+	    int option = scanner.nextInt();
+	    switch (option) {
+	    case 1 -> addPerson();
+	    case 2 -> editPerson();
+	    case 3 -> deletePerson();
+	    case 4 -> System.out.println("exiting");
+	    default -> System.out.println("invalid option");
+	    }
+	    if (option == 4)
+		break;
+	}
+    }
+
     public static void main(String[] args) {
 	AddressBookMain addressBook = new AddressBookMain();
 	System.out.println("Start with Displaying Welcome to Address Book Program in AddressBookMain class");
-	addressBook.addPerson();
-	addressBook.editPerson();
-	addressBook.deletePerson();
-
+	addressBook.addMultiplePerson();
     }
 
 }
