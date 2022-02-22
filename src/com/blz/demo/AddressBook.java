@@ -105,7 +105,8 @@ public class AddressBook {
     }
 
     public void addMultiplePerson() {
-	while (true) {
+	int x = 1;
+	while (x != 0) {
 	    System.out.println(
 		    "Enter the option \n1)To Add Contect\n2)To Edit Contact" + "\n3)To Delete Contact\n4)exit");
 	    int option = scanner.nextInt();
@@ -113,12 +114,13 @@ public class AddressBook {
 	    case 1 -> addPerson();
 	    case 2 -> editPerson();
 	    case 3 -> deletePerson();
-	    case 4 -> System.out.println("exiting");
-	    default -> System.out.println("invalid option");
+	    case 4 -> {
+		System.out.println("exiting");
+		x = 0;
 	    }
-	    if (option == 4)
-		break;
+	    default -> System.out.println("invalid option");
+
+	    }
 	}
     }
-
 }
