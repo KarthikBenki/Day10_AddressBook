@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
-    LinkedList<AddressBook> addressbooks = new LinkedList<>();
     HashMap<Integer, AddressBook> addressbookNum = new HashMap<>();
 
     public void addMultipleAddressBook() {
